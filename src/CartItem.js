@@ -14,10 +14,7 @@ class CartItem extends Component {
           </div>
         </div>
       </div>
-
-    )
-  }
-
+    )}
 }
 
 export default CartItem

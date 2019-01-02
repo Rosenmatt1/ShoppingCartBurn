@@ -32,16 +32,16 @@ class App extends Component {
   updateQuantity = (event) => {
     this.setState({
       quantity: event.target.value
-    }) 
+    })
   }
 
   updateItem = (event) => {
     var filteredPrice = this.state.products.filter(product => {
-      return event.target.value === product.name 
+      return event.target.value === product.name
     })
     this.setState({
       name: event.target.value,
-      price: (filteredPrice[0].priceInCents/100)
+      price: (filteredPrice[0].priceInCents / 100)
     })
   }
 
@@ -64,22 +64,21 @@ class App extends Component {
     return (
       <div>
         <CartHeader />
-        <CartItems 
-          cart = {this.state.cart}
+        <CartItems
+          cart={this.state.cart}
         />
-        <AddItemForm 
-          total = {this.state.total}
-          products = {this.state.products}
-          updateQuantity = {this.updateQuantity}
-          updateItem = {this.updateItem}
-          addItem = {this.addItem}
+        <AddItemForm
+          total={this.state.total}
+          products={this.state.products}
+          updateQuantity={this.updateQuantity}
+          updateItem={this.updateItem}
+          addItem={this.addItem}
         />
-        <CartFooter 
-          copyright = "&copy; copyright" 
+        <CartFooter
+          copyright="&copy; copyright"
         />
       </div>
-    )
-  }
+    )}
 }
 
 export default App
